@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e5ddd5;
+  font-family: "Roboto", sans-serif;
+}
+
+.chat__section {
+  width: 800px;
+  max-width: 100%;
+  background-color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5),    0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand {
+  padding:15px 20px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  background-color: #ededed;
+  position: relative;
+}
+
+.brand h1 {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #51585c;
+  margin-left: 10px;
+}
+
+.brand p {
+  font-size: 10px;
+  font-weight: 200;
+  text-transform: lowercase;
+}
+
+.brand i{
+  position: absolute;
+  right: 30px;
+  color: #51585c;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.brand .night{
+  display: none;
+}
+
+.message__area {
+  height: 500px;
+  padding: 16px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #ccebdc;
+  padding-top: 40px;
+}
+
+.message__area::-webkit-scrollbar {
+  width: 0.4rem;
+  z-index: 15000;
+}
+
+.message__area::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.message__area::-webkit-scrollbar-thumb {
+  background-color: rgba(136, 136, 136, 0.285);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.message__area::-webkit-scrollbar-thumb:active{
+  background-color: #555;
+}
+
+textarea {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  outline: none;
+  background-color: #f0f0f0;
+  resize: none;
+}
+
+.message {
+  padding:15px 20px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  margin-bottom: 30px;
+  max-width: 70%;
+  position: relative;
+  letter-spacing: 0.5px;
+  overflow-wrap: break-word;
+}
+
+.incoming {
+  /* background-color: #8f8be8; */
+  background-color: #056162;
+  color: #fff;
+  margin-right: auto;
+}
+
+.outgoing {
+  background-color: #e7e8ff;
+  color: #353537;
+  margin-left: auto;
+}
+
+.message h4 {
+  position: absolute;
+  top: -20px;
+  left: 4px;
+  color: #666;
+  font-size: 14px;
+}
+
+.outgoing h4 {
+  position: absolute;
+  top: -20px;
+  left: calc(100% - 50px);
+}
+
+.message time{
+  position: absolute;
+  left: -40px;
+  bottom: 37%;
+  color: #888;
+  font-size: 10px;
+}
+
+.incoming time{
+  position: absolute;
+  left: calc(100% + 10px);
+}
+
+@media only screen and (max-width: 825px) {
+  .message__area {
+    height: 85vh;
+  }
+
+  .chat__section{
+    height: 100vh;
+  }
+}
